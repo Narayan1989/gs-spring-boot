@@ -20,8 +20,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17' 
 
+      - name: Show repo structure
+        run: ls -R
+
       - name: Build App
-        working-directory: gs-spring-boot/complete
+        working-directory: complete
         run: mvn clean package -DskipTests
 
       - name: Login to DockerHub
