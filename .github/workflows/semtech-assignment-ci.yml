@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '17' 
 
       - name: Build App
-        working-directory: complete
+        working-directory: gs-spring-boot/complete
         run: mvn clean package -DskipTests
 
       - name: Login to DockerHub
