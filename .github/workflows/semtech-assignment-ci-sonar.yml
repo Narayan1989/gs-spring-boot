@@ -25,6 +25,7 @@ jobs:
         run: mvn clean compile
 
       - name: SonarCloud Scan
+        working-directory: complete   # ✅ FIX ADDED HERE
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
