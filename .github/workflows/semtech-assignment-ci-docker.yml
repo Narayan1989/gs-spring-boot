@@ -35,7 +35,7 @@ jobs:
 
       - name: Build Docker Image
         working-directory: complete
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ env.SHORT_SHA }} .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ github.sha }} .
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ env.SHORT_SHA }}
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ github.sha }}
