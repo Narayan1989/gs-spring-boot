@@ -411,14 +411,15 @@ This repository is a fork of a Spring Boot application extended with DevOps prac
 - AWS CloudFormation (IAM)
 
 ## 📂 Project Structure
-.github/workflows
+```
+.github/workflows/
 semtech-assignment-ci-sonar.yaml
 semtech-assignment-ci-docker.yaml
 codeql.yml
 reusable-java-build.yml
+```
 
-cloudformation
-template.yaml
+cloudformation/template.yaml
 
 complete/
 Spring Boot Application Source Code
