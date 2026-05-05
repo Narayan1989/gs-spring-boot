@@ -36,5 +36,4 @@ jobs:
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=$SONAR_TOKEN
 
-
-// Sonar test PR            
+            
