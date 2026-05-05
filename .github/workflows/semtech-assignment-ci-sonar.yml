@@ -21,6 +21,7 @@ jobs:
           java-version: 17
 
       - name: Build project
+        working-directory: complete
         run: mvn clean compile
 
       - name: SonarCloud Scan
