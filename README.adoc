@@ -412,16 +412,16 @@ This repository is a fork of a Spring Boot application extended with DevOps prac
 
 ## 📂 Project Structure
 .github/workflows/
-├── semtech-assignment-ci-sonar.yaml
-├── semtech-assignment-ci-docker.yaml
-├── codeql.yml
-├── reusable-java-build.yml
+semtech-assignment-ci-sonar.yaml
+semtech-assignment-ci-docker.yaml
+codeql.yml
+reusable-java-build.yml
 
 cloudformation/
-└── template.yaml
+template.yaml
 
 complete/
-└── Spring Boot Application Source Code
+Spring Boot Application Source Code
 
 ## 🔄 CI/CD Workflows (GitHub Actions)
 
