@@ -5,15 +5,18 @@ on:
     branches:
       - main
       - feature/**
-  pull_request:    
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
-  sonar:
+  sonarqube:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -26,7 +29,7 @@ jobs:
         run: mvn clean compile
 
       - name: SonarCloud Scan
-        working-directory: complete   # ✅ FIX ADDED HERE
+        working-directory: complete
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
@@ -35,5 +38,3 @@ jobs:
             -Dsonar.organization=narayan1989 \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=$SONAR_TOKEN
-
-#test sonar
